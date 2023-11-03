@@ -1,0 +1,232 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdlsa55jqxqps"]
+
+[ext_resource type="Script" path="res://game.gd" id="1_j4cx7"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_j4cx7")
+
+[node name="P1Board" type="RichTextLabel" parent="."]
+offset_left = 524.0
+offset_top = 375.0
+offset_right = 596.0
+offset_bottom = 444.0
+text = "[0] [0] [0] 
+[0] [0] [0] 
+[0] [0] [0] "
+fit_content = true
+scroll_active = false
+shortcut_keys_enabled = false
+
+[node name="P2Board" type="RichTextLabel" parent="."]
+offset_left = 524.0
+offset_top = 132.0
+offset_right = 596.0
+offset_bottom = 201.0
+text = "[0] [0] [0] 
+[0] [0] [0] 
+[0] [0] [0] "
+fit_content = true
+scroll_active = false
+shortcut_keys_enabled = false
+
+[node name="TurnTattle" type="RichTextLabel" parent="."]
+offset_left = 502.0
+offset_top = 12.0
+offset_right = 617.0
+offset_bottom = 35.0
+text = "Player X's Turn"
+fit_content = true
+scroll_active = false
+shortcut_keys_enabled = false
+
+[node name="WinTattle" type="RichTextLabel" parent="."]
+visible = false
+offset_left = 502.0
+offset_top = 276.0
+offset_right = 617.0
+offset_bottom = 299.0
+text = "Player X Wins!"
+fit_content = true
+scroll_active = false
+shortcut_keys_enabled = false
+
+[node name="RollTattle" type="RichTextLabel" parent="."]
+offset_left = 75.0
+offset_top = 96.0
+offset_right = 133.45
+offset_bottom = 119.0
+text = "Roll: X"
+fit_content = true
+scroll_active = false
+shortcut_keys_enabled = false
+
+[node name="ControlHints" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="A" type="RichTextLabel" parent="ControlHints"]
+layout_mode = 0
+offset_left = 528.0
+offset_top = 451.0
+offset_right = 541.685
+offset_bottom = 474.0
+text = "A"
+fit_content = true
+scroll_active = false
+shortcut_keys_enabled = false
+
+[node name="W" type="RichTextLabel" parent="ControlHints"]
+layout_mode = 0
+offset_left = 549.0
+offset_top = 451.0
+offset_right = 565.665
+offset_bottom = 474.0
+text = "W"
+fit_content = true
+scroll_active = false
+shortcut_keys_enabled = false
+
+[node name="D" type="RichTextLabel" parent="ControlHints"]
+layout_mode = 0
+offset_left = 576.0
+offset_top = 451.0
+offset_right = 589.685
+offset_bottom = 474.0
+text = "D"
+fit_content = true
+scroll_active = false
+shortcut_keys_enabled = false
+
+[node name="A2" type="RichTextLabel" parent="ControlHints"]
+layout_mode = 0
+offset_left = 526.0
+offset_top = 112.0
+offset_right = 541.965
+offset_bottom = 158.0
+text = "<"
+fit_content = true
+scroll_active = false
+shortcut_keys_enabled = false
+
+[node name="W2" type="RichTextLabel" parent="ControlHints"]
+layout_mode = 0
+offset_left = 551.0
+offset_top = 111.0
+offset_right = 567.665
+offset_bottom = 134.0
+text = "/\\"
+fit_content = true
+scroll_active = false
+shortcut_keys_enabled = false
+
+[node name="D2" type="RichTextLabel" parent="ControlHints"]
+layout_mode = 0
+offset_left = 576.0
+offset_top = 112.0
+offset_right = 589.685
+offset_bottom = 135.0
+text = ">"
+fit_content = true
+scroll_active = false
+shortcut_keys_enabled = false
+
+[node name="P1Totals" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Col1Total" type="RichTextLabel" parent="P1Totals"]
+layout_mode = 0
+offset_left = 513.0
+offset_top = 350.0
+offset_right = 542.0
+offset_bottom = 375.0
+text = "0"
+fit_content = true
+scroll_active = false
+shortcut_keys_enabled = false
+
+[node name="Col2Total" type="RichTextLabel" parent="P1Totals"]
+layout_mode = 0
+offset_left = 544.0
+offset_top = 350.0
+offset_right = 573.0
+offset_bottom = 375.0
+text = "0"
+fit_content = true
+scroll_active = false
+shortcut_keys_enabled = false
+
+[node name="Col3Total" type="RichTextLabel" parent="P1Totals"]
+layout_mode = 0
+offset_left = 578.0
+offset_top = 350.0
+offset_right = 607.0
+offset_bottom = 375.0
+text = "0"
+fit_content = true
+scroll_active = false
+shortcut_keys_enabled = false
+
+[node name="GrandTotal" type="RichTextLabel" parent="P1Totals"]
+layout_mode = 0
+offset_left = 634.0
+offset_top = 375.0
+offset_right = 714.0
+offset_bottom = 398.0
+text = "Score: 999"
+fit_content = true
+scroll_active = false
+shortcut_keys_enabled = false
+
+[node name="P2Totals" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 516.0
+offset_top = 201.0
+offset_right = 556.0
+offset_bottom = 241.0
+
+[node name="Col1Total" type="RichTextLabel" parent="P2Totals"]
+layout_mode = 0
+offset_right = 29.0
+offset_bottom = 25.0
+text = "0"
+fit_content = true
+scroll_active = false
+shortcut_keys_enabled = false
+
+[node name="Col2Total" type="RichTextLabel" parent="P2Totals"]
+layout_mode = 0
+offset_left = 37.0
+offset_right = 66.0
+offset_bottom = 25.0
+text = "0"
+fit_content = true
+scroll_active = false
+shortcut_keys_enabled = false
+
+[node name="Col3Total" type="RichTextLabel" parent="P2Totals"]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 1.0
+offset_right = 98.0
+offset_bottom = 26.0
+text = "0"
+fit_content = true
+scroll_active = false
+shortcut_keys_enabled = false
+
+[node name="GrandTotal" type="RichTextLabel" parent="P2Totals"]
+layout_mode = 0
+offset_left = 118.0
+offset_top = -18.0
+offset_right = 198.0
+offset_bottom = 5.0
+text = "Score: 999"
+fit_content = true
+scroll_active = false
+shortcut_keys_enabled = false

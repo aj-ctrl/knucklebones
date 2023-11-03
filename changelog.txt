@@ -1,0 +1,7 @@
+changelog:
+-changed update_columns to update_slots to improve clarity
+-created an update_column function to reduce repeated code
+-moved the handling of pops to happen after a turn is taken so only the relevant column is updated and updates only happen after the board is changed instead of constantly
+-added process_scores and process_score to update the column totals
+-added grand total scores for both boards (in the silliest way possible...)
+-created end_game function to end the game when a board is filled
