@@ -1,232 +1,357 @@
-[gd_scene load_steps=2 format=3 uid="uid://cdlsa55jqxqps"]
+[gd_scene load_steps=4 format=3 uid="uid://cdlsa55jqxqps"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_j4cx7"]
+[ext_resource type="Theme" uid="uid://3gl8fq2d6cxa" path="res://boardTheme.tres" id="2_fe610"]
+[ext_resource type="Theme" uid="uid://yp4q25f8giyg" path="res://tattleTheme.tres" id="3_n7oll"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_j4cx7")
 
-[node name="P1Board" type="RichTextLabel" parent="."]
-offset_left = 524.0
-offset_top = 375.0
-offset_right = 596.0
-offset_bottom = 444.0
-text = "[0] [0] [0] 
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="P1Board" type="RichTextLabel" parent="Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -287.0
+offset_right = 150.0
+offset_bottom = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset = Vector2(135, 119)
+theme = ExtResource("2_fe610")
+bbcode_enabled = true
+text = "[center][0] [0] [0] 
 [0] [0] [0] 
-[0] [0] [0] "
+[0] [0] [0] [/center]"
 fit_content = true
 scroll_active = false
 shortcut_keys_enabled = false
 
-[node name="P2Board" type="RichTextLabel" parent="."]
-offset_left = 524.0
-offset_top = 132.0
-offset_right = 596.0
-offset_bottom = 201.0
-text = "[0] [0] [0] 
+[node name="P2Board" type="RichTextLabel" parent="Control"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.0
+offset_top = 14.0
+offset_right = 150.0
+offset_bottom = 278.0
+grow_horizontal = 2
+theme = ExtResource("2_fe610")
+bbcode_enabled = true
+text = "[center][0] [0] [0] 
 [0] [0] [0] 
-[0] [0] [0] "
+[0] [0] [0] [/center]"
 fit_content = true
 scroll_active = false
 shortcut_keys_enabled = false
 
-[node name="TurnTattle" type="RichTextLabel" parent="."]
-offset_left = 502.0
-offset_top = 12.0
-offset_right = 617.0
-offset_bottom = 35.0
+[node name="TurnTattle" type="RichTextLabel" parent="Control"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 49.0
+offset_top = -17.0
+offset_right = 225.0
+offset_bottom = 17.0
+grow_vertical = 2
+theme = ExtResource("3_n7oll")
 text = "Player X's Turn"
 fit_content = true
 scroll_active = false
 shortcut_keys_enabled = false
 
-[node name="WinTattle" type="RichTextLabel" parent="."]
+[node name="WinTattle" type="RichTextLabel" parent="Control"]
 visible = false
-offset_left = 502.0
-offset_top = 276.0
-offset_right = 617.0
-offset_bottom = 299.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -83.0
+offset_top = -17.0
+offset_right = 83.0
+offset_bottom = 17.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_n7oll")
+bbcode_enabled = true
 text = "Player X Wins!"
 fit_content = true
 scroll_active = false
 shortcut_keys_enabled = false
 
-[node name="RollTattle" type="RichTextLabel" parent="."]
+[node name="RollTattle" type="RichTextLabel" parent="Control"]
 offset_left = 75.0
 offset_top = 96.0
-offset_right = 133.45
-offset_bottom = 119.0
+offset_right = 153.0
+offset_bottom = 130.0
+theme = ExtResource("3_n7oll")
 text = "Roll: X"
 fit_content = true
 scroll_active = false
 shortcut_keys_enabled = false
 
-[node name="ControlHints" type="Control" parent="."]
+[node name="ControlHints" type="Control" parent="Control"]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1152.0
+offset_bottom = 648.0
 
-[node name="A" type="RichTextLabel" parent="ControlHints"]
+[node name="A" type="RichTextLabel" parent="Control/ControlHints"]
 layout_mode = 0
-offset_left = 528.0
-offset_top = 451.0
-offset_right = 541.685
-offset_bottom = 474.0
-text = "A"
+offset_left = 489.0
+offset_top = 621.0
+offset_right = 505.0
+offset_bottom = 644.0
+bbcode_enabled = true
+text = "[center]A[/center]"
 fit_content = true
 scroll_active = false
 shortcut_keys_enabled = false
 
-[node name="W" type="RichTextLabel" parent="ControlHints"]
-layout_mode = 0
-offset_left = 549.0
-offset_top = 451.0
-offset_right = 565.665
-offset_bottom = 474.0
-text = "W"
+[node name="W" type="RichTextLabel" parent="Control/ControlHints"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -9.0
+offset_top = 297.0
+offset_right = 7.0
+offset_bottom = 320.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]W[/center]"
 fit_content = true
 scroll_active = false
 shortcut_keys_enabled = false
 
-[node name="D" type="RichTextLabel" parent="ControlHints"]
+[node name="D" type="RichTextLabel" parent="Control/ControlHints"]
 layout_mode = 0
-offset_left = 576.0
-offset_top = 451.0
-offset_right = 589.685
-offset_bottom = 474.0
-text = "D"
+offset_left = 645.0
+offset_top = 621.0
+offset_right = 661.0
+offset_bottom = 644.0
+bbcode_enabled = true
+text = "[center]D[/center]"
 fit_content = true
 scroll_active = false
 shortcut_keys_enabled = false
 
-[node name="A2" type="RichTextLabel" parent="ControlHints"]
+[node name="A2" type="RichTextLabel" parent="Control/ControlHints"]
 layout_mode = 0
-offset_left = 526.0
-offset_top = 112.0
-offset_right = 541.965
-offset_bottom = 158.0
-text = "<"
+offset_left = 489.0
+offset_top = 7.0
+offset_right = 505.0
+offset_bottom = 30.0
+bbcode_enabled = true
+text = "[center]<[/center]"
 fit_content = true
 scroll_active = false
 shortcut_keys_enabled = false
 
-[node name="W2" type="RichTextLabel" parent="ControlHints"]
-layout_mode = 0
-offset_left = 551.0
-offset_top = 111.0
-offset_right = 567.665
-offset_bottom = 134.0
-text = "/\\"
+[node name="W2" type="RichTextLabel" parent="Control/ControlHints"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -9.0
+offset_top = -317.0
+offset_right = 7.0
+offset_bottom = -294.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]/\\[/center]"
 fit_content = true
 scroll_active = false
 shortcut_keys_enabled = false
 
-[node name="D2" type="RichTextLabel" parent="ControlHints"]
+[node name="D2" type="RichTextLabel" parent="Control/ControlHints"]
 layout_mode = 0
-offset_left = 576.0
-offset_top = 112.0
-offset_right = 589.685
-offset_bottom = 135.0
-text = ">"
+offset_left = 645.0
+offset_top = 7.0
+offset_right = 661.0
+offset_bottom = 30.0
+bbcode_enabled = true
+text = "[center]>[/center]"
 fit_content = true
 scroll_active = false
 shortcut_keys_enabled = false
 
-[node name="P1Totals" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="P1Totals" type="Control" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Col1Total" type="RichTextLabel" parent="P1Totals"]
+[node name="Col1Total" type="RichTextLabel" parent="Control/P1Totals"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -92.0
+offset_top = 27.0
+offset_right = -63.0
+offset_bottom = 52.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "0"
+fit_content = true
+scroll_active = false
+shortcut_keys_enabled = false
+
+[node name="Col2Total" type="RichTextLabel" parent="Control/P1Totals"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -14.5
+offset_top = 27.0
+offset_right = 14.5
+offset_bottom = 52.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "0"
+fit_content = true
+scroll_active = false
+shortcut_keys_enabled = false
+
+[node name="Col3Total" type="RichTextLabel" parent="Control/P1Totals"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 62.0
+offset_top = 27.0
+offset_right = 91.0
+offset_bottom = 52.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "0"
+fit_content = true
+scroll_active = false
+shortcut_keys_enabled = false
+
+[node name="GrandTotal" type="RichTextLabel" parent="Control/P1Totals"]
 layout_mode = 0
-offset_left = 513.0
-offset_top = 350.0
-offset_right = 542.0
+offset_left = 724.0
+offset_top = 341.0
+offset_right = 818.0
 offset_bottom = 375.0
+theme = ExtResource("3_n7oll")
+text = "Score: 0"
+fit_content = true
+scroll_active = false
+shortcut_keys_enabled = false
+
+[node name="P2Totals" type="Control" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Col1Total" type="RichTextLabel" parent="Control/P2Totals"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -92.0
+offset_top = -42.0
+offset_right = -63.0
+offset_bottom = -17.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
 text = "0"
 fit_content = true
 scroll_active = false
 shortcut_keys_enabled = false
 
-[node name="Col2Total" type="RichTextLabel" parent="P1Totals"]
-layout_mode = 0
-offset_left = 544.0
-offset_top = 350.0
-offset_right = 573.0
-offset_bottom = 375.0
+[node name="Col2Total" type="RichTextLabel" parent="Control/P2Totals"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -14.5
+offset_top = -42.0
+offset_right = 14.5
+offset_bottom = -17.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
 text = "0"
 fit_content = true
 scroll_active = false
 shortcut_keys_enabled = false
 
-[node name="Col3Total" type="RichTextLabel" parent="P1Totals"]
-layout_mode = 0
-offset_left = 578.0
-offset_top = 350.0
-offset_right = 607.0
-offset_bottom = 375.0
+[node name="Col3Total" type="RichTextLabel" parent="Control/P2Totals"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 63.0
+offset_top = -42.0
+offset_right = 92.0
+offset_bottom = -17.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
 text = "0"
 fit_content = true
 scroll_active = false
 shortcut_keys_enabled = false
 
-[node name="GrandTotal" type="RichTextLabel" parent="P1Totals"]
-layout_mode = 0
-offset_left = 634.0
-offset_top = 375.0
-offset_right = 714.0
-offset_bottom = 398.0
-text = "Score: 999"
-fit_content = true
-scroll_active = false
-shortcut_keys_enabled = false
-
-[node name="P2Totals" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_left = 516.0
-offset_top = 201.0
-offset_right = 556.0
-offset_bottom = 241.0
-
-[node name="Col1Total" type="RichTextLabel" parent="P2Totals"]
-layout_mode = 0
-offset_right = 29.0
-offset_bottom = 25.0
-text = "0"
-fit_content = true
-scroll_active = false
-shortcut_keys_enabled = false
-
-[node name="Col2Total" type="RichTextLabel" parent="P2Totals"]
-layout_mode = 0
-offset_left = 37.0
-offset_right = 66.0
-offset_bottom = 25.0
-text = "0"
-fit_content = true
-scroll_active = false
-shortcut_keys_enabled = false
-
-[node name="Col3Total" type="RichTextLabel" parent="P2Totals"]
-layout_mode = 0
-offset_left = 69.0
-offset_top = 1.0
-offset_right = 98.0
-offset_bottom = 26.0
-text = "0"
-fit_content = true
-scroll_active = false
-shortcut_keys_enabled = false
-
-[node name="GrandTotal" type="RichTextLabel" parent="P2Totals"]
-layout_mode = 0
-offset_left = 118.0
-offset_top = -18.0
-offset_right = 198.0
-offset_bottom = 5.0
-text = "Score: 999"
+[node name="GrandTotal" type="RichTextLabel" parent="Control/P2Totals"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 148.0
+offset_top = -42.0
+offset_right = 242.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_n7oll")
+text = "Score: 0"
 fit_content = true
 scroll_active = false
 shortcut_keys_enabled = false

@@ -1,4 +1,15 @@
-changelog:
+[v1.1]
+-changed scoring system to add the scores and multipy by the matches instead of just multipying the dice
+-fixed matching dice with opponent also removing the die on the placing players side
+-increased font size of game boards
+-added [center] tags to most of the labels
+-moved a lot of tattles around to accomodate larger board size
+-changed the font size of many labels for readability
+-made turn tattle hide on game end for clarity
+-set the background color to black at runtime
+-added ability to restart the game with the spacebar when the game has ended
+
+[v1.0]
 -changed update_columns to update_slots to improve clarity
 -created an update_column function to reduce repeated code
 -moved the handling of pops to happen after a turn is taken so only the relevant column is updated and updates only happen after the board is changed instead of constantly
